@@ -8,11 +8,14 @@
     <title>Focus-Timer</title>
     <link rel="stylesheet" href="./assets/favicon.svg">
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg"> <!--Para aparecer o ícone na aba da página-->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
     <div id="app">
         <button id="toggle-mode">
             <span>Ativar/Desativar Light Mode</span>
+            <i class="ph-bold ph-sun"></i> <!--mostra o ícone de sol-->
+            <i class="ph-bold ph-moon"></i>
         </button>
 
         <section id="time">
@@ -21,12 +24,12 @@
         </section>
 
         <section id="controls">
-            <button>play</button>
-            <button>pause</button>
-            <button>stop</button>
-            <button>set</button>
-            <button>musicon</button>
-            <button>musicoff</button>
+            <button class="ph ph-play-circle"></button>
+            <button class="ph ph-pause-circle"></button>
+            <button class="ph ph-timer"></button>
+            <button class="ph ph-stop-circle"></button>
+            <button class="ph ph-speaker-none"></button>
+            <button class="ph ph-speaker-high"></button>
         </section>
     </div>
 </body>
