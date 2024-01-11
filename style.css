@@ -10,9 +10,43 @@
     --text-color:hsl(var(--hue), 40%, 98%, 1);
     --primary-color: hsl(var(--hue), 100%, 63%);
     --controls-bg-color: hsl(var(--hue), 0%, 14%);
+    --button-secondary: hsl(var(--hue), 40%, 98%, 1); /*??????????????*/
 
     font-size: clamp(40%, 1% + 2vw, 62.5%); /*Define o tamanho da fonte responsivo, o clamp define o valor mínimo entre o preferido e o máximo do design*/
 }
+
+html.light {
+    --text-color: hsl(var(--hue), 5%, 7%);
+    --bg-color:hsl(var(--hue), 40%, 98%, 1);
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+    display: none;
+}
+
+#toggle-mode {
+    position: absolute;
+    right: 3.2rem;
+    top: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 0;
+
+    color: var(--text-color);
+}
+
+/* Classe sr-only para acessibilidade: esconde visualmente o elemento, mas o mantém acessível para leitores de tela */
+.sr-only {
+    width: 1px; /* Largura mínima */
+    height: 1px; /* Altura mínima */
+    position: absolute; /* Posiciona absolutamente para removê-lo do fluxo normal do layout */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse as dimensões mínimas */
+
+    margin: -1px; /* Evita que o elemento afete o layout quando posicionado absolutamente */
+    padding: 0px; /* Remove qualquer padding que possa afetar o tamanho do elemento */
+    appearance: none; /* Remove qualquer estilo padrão do navegador, como estilos de botão padrão em alguns navegadores */
+}
+
 
 body {
     background-color: var(--bg-color);
@@ -57,5 +91,14 @@ button {
 }
 
 .secondary {
-    color: var(--text-color);
+    color: var(--button-secondary);
+}
+
+.running .ph-play-circle,
+.running .ph-timer,
+.music-on .ph-speaker-none,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-timer,
+html:not(.music-on) .ph-speaker-high /*se não estiver com music-on ele vai pegar o speaker-high e remover da tela*/ {
+    display: none;
 }
