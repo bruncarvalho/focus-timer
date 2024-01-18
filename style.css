@@ -98,7 +98,7 @@ button {
 .running .ph-timer,
 .music-on .ph-speaker-none,
 html:not(.running) .ph-pause-circle,
-html:not(.running) .ph-timer,
+html:not(.running) .ph-stop-circle,
 html:not(.music-on) .ph-speaker-high /*se não estiver com music-on ele vai pegar o speaker-high e remover da tela*/ {
     display: none;
 }
